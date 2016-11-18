@@ -14,7 +14,7 @@ public class Tab1Activity extends AppCompatActivity {
 
         //TabHost tabHost = getTabHost();
         TextView view = new TextView(this);
-        view.setText("yeah test");
+        view.setText("遊びましたtest");
         setContentView(view);
         System.out.println("testtab1");
     }
