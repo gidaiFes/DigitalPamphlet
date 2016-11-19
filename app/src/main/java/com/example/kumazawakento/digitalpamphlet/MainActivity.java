@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         //-----------------------ウィジェット紐付け
         Button gainButton = (Button)findViewById(R.id.button_gain);
         Button sendaiButton = (Button)findViewById(R.id.button_sendai);
-        Button kentButton = (Button)findViewById(R.id.button_sendai);
+        Button kentButton = (Button)findViewById(R.id.button_kent);
         //---------------------------------------
 
 
@@ -71,6 +71,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplication(), sendaiTestActivity.class);
+                startActivity(intent);
+            }
+        });
+        //------------------------------------
+
+        //------------- buttonListener kent
+        kentButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplication(), kentTestActivity.class);
                 startActivity(intent);
             }
         });
