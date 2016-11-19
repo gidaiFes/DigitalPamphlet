@@ -5,8 +5,11 @@ import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.viewpagerindicator.TitlePageIndicator;
 
@@ -26,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         Button gainButton = (Button)findViewById(R.id.button_gain);
         Button sendaiButton = (Button)findViewById(R.id.button_sendai);
         //---------------------------------------
-
 
 
 
@@ -73,5 +75,24 @@ public class MainActivity extends AppCompatActivity {
         });
         //------------------------------------
 
+
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // メニューの要素を追加して取得
+        MenuItem actionItem = menu.add("Action Button Help Icon");
+        // アイコンを設定
+        actionItem.setIcon(android.R.drawable.ic_menu_help);
+
+        // SHOW_AS_ACTION_ALWAYS:常に表示
+        actionItem.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Toast.makeText(this, "Selected Item: " + item.getTitle(), Toast.LENGTH_SHORT).show();
+        return true;
     }
 }
