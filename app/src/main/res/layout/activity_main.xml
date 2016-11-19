@@ -43,18 +43,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_sendai" />
+
+    </LinearLayout>
+
         <Button
             android:text="kentActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_kent" />
-    </LinearLayout>
-
-
         <android.support.v4.view.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="136dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
