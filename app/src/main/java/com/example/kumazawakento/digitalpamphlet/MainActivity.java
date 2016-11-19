@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         //-----------------------ウィジェット紐付け
         Button gainButton = (Button)findViewById(R.id.button_gain);
         Button sendaiButton = (Button)findViewById(R.id.button_sendai);
+        Button kentButton = (Button)findViewById(R.id.button_sendai);
         //---------------------------------------
 
 

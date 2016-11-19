@@ -19,7 +19,7 @@
         </activity>
         <activity android:name=".gainTestActivity" />
         <activity android:name=".sendaiTestActivity" />
-        <activity android:name=".kentoTestActivity"></activity>
+        <activity android:name=".kentTestActivity"></activity>
     </application>
 
 </manifest>
