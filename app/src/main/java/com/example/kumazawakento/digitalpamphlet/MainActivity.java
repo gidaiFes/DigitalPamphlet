@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_main);
 
         //-----------------------ウィジェット紐付け
@@ -90,6 +92,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
+
+        menu.add("aaaaaaaa");
+
         // メニューの要素を追加して取得
         MenuItem actionItem = menu.add("Action Button Help Icon");
         // アイコンを設定
