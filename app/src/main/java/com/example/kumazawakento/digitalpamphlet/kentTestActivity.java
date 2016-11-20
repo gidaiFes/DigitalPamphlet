@@ -17,12 +17,9 @@ public class kentTestActivity extends AppCompatActivity {
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_kent_test);
 
-
         // ツールバーをアクションバーとしてセット
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-        toolbar.inflateMenu(R.menu.main);
-
     }
 
     @Override
@@ -48,17 +45,7 @@ public class kentTestActivity extends AppCompatActivity {
         return true;
     }
 
-    toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-        @Override
-        public boolean onMenuItemClick(MenuItem menuItem) {
-            int id = menuItem.getItemId();
-            if (id == R.id.action_settings) {
-                Toast.makeText(MainActivity.this, "settings clicked 2", Toast.LENGTH_SHORT).show();
-                return true;
-            }
-            return false;
-        }
-    });
+
 
 
 }
