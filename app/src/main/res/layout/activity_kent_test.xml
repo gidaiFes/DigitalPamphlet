@@ -10,7 +10,9 @@
     android:paddingTop="0dp"
     tools:context="com.example.kumazawakento.digitalpamphlet.kentTestActivity">
 
-    <!-- ここにToolBarを定義 -->
+
+
+    <!-- ToolBar定義 -->
     <android.support.v7.widget.Toolbar
         android:id="@+id/tool_bar"
         android:layout_height="wrap_content"
@@ -18,6 +20,22 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         android:minHeight="?attr/actionBarSize"
         android:background="?attr/colorPrimary">
+
+        <!-- スピナー追加 -->
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner" />
+
+
     </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/testTextView" />
 
 </RelativeLayout>
