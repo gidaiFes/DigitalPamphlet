@@ -3,6 +3,7 @@
     package="com.example.kumazawakento.digitalpamphlet">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="false"
         android:icon="@drawable/gidai"
@@ -20,7 +21,8 @@
         </activity>
         <activity android:name=".gainTestActivity" />
         <activity android:name=".sendaiTestActivity" />
-        <activity android:name=".kentTestActivity"></activity>
+        <activity android:name=".kentTestActivity" />
+        <activity android:name=".TabActivity"></activity>
     </application>
 
 </manifest>

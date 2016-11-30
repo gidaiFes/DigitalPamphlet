@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_main);
 
+        Intent intent = new Intent(getApplication(), TabActivity.class);
+        startActivity(intent);
+
         //-----------------------ウィジェット紐付け
         Button gainButton = (Button)findViewById(R.id.button_gain);
         Button sendaiButton = (Button)findViewById(R.id.button_sendai);

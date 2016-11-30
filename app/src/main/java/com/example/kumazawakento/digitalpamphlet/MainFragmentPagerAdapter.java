@@ -14,11 +14,11 @@ public class MainFragmentPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return MainFragment.newInstance(android.R.color.holo_blue_bright);
+                return MainFragment.newInstance(android.R.color.white);
             case 1:
-                return MainFragment.newInstance(android.R.color.holo_green_light);
+                return MainFragment.newInstance(android.R.color.white);
             case 2:
-                return MainFragment.newInstance(android.R.color.holo_red_dark);
+                return MainFragment.newInstance(android.R.color.white);
         }
         return null;
     }
