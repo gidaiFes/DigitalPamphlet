@@ -4,10 +4,10 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
     tools:context="com.example.kumazawakento.digitalpamphlet.MainActivity">
 
     <LinearLayout
@@ -26,7 +26,8 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:visibility="gone"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,23 +35,24 @@
         android:orientation="horizontal">
 
         <Button
-            android:text="gainActivity"
+            android:text="gain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_gain" />
         <Button
-            android:text="sendaiActivity"
+            android:text="sendai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_sendai" />
 
-    </LinearLayout>
-
         <Button
-            android:text="kentActivity"
+            android:text="kent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_kent" />
+
+    </LinearLayout>
+
 
         <android.support.v4.view.ViewPager
         android:id="@+id/pager"
@@ -68,6 +70,21 @@
         android:layout_below="@+id/textView4"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="202dp"
+            android:layout_above="@+id/tab_layout"
+            android:layout_weight="1"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
 
     </LinearLayout>

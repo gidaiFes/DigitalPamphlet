@@ -21,11 +21,11 @@ public class gainTestActivity extends AppCompatActivity {
 
         //------------------------タブ設定
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("タブ1"));
-        tabLayout.addTab(tabLayout.newTab().setText("タブ2"));
-        tabLayout.addTab(tabLayout.newTab().setText("タブ3"));
-        tabLayout.addTab(tabLayout.newTab().setText("タブ4"));
-        tabLayout.addTab(tabLayout.newTab().setText("タブ5"));
+        tabLayout.addTab(tabLayout.newTab().setText("HOME"));
+        tabLayout.addTab(tabLayout.newTab().setText("ARTIST"));
+        tabLayout.addTab(tabLayout.newTab().setText("TIME TABLE"));
+        tabLayout.addTab(tabLayout.newTab().setText("FOODS"));
+        tabLayout.addTab(tabLayout.newTab().setText("GOODS"));
 
     }
 

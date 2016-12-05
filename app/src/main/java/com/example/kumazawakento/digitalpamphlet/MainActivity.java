@@ -2,6 +2,7 @@ package com.example.kumazawakento.digitalpamphlet;
 
 
 import android.content.Intent;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,17 +28,14 @@ public class MainActivity extends AppCompatActivity {
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_main);
 
+
+        //-------------------------pager.tab.drawer
+        /*
         Intent intent = new Intent(getApplication(), TabActivity.class);
         startActivity(intent);
+        */
 
-        //-----------------------ウィジェット紐付け
-        Button gainButton = (Button)findViewById(R.id.button_gain);
-        Button sendaiButton = (Button)findViewById(R.id.button_sendai);
-        Button kentButton = (Button)findViewById(R.id.button_kent);
-        //---------------------------------------
-
-
-
+        /*
         //------------------------pager
         mAdapter = new MainFragmentPagerAdapter(getSupportFragmentManager());
 
@@ -58,6 +56,15 @@ public class MainActivity extends AppCompatActivity {
         indicator.setSelectedColor(0xFF000000);
         indicator.setSelectedBold(true);
         //-----------------------------------------------------------------------------
+        */
+
+
+        //-----------------------ウィジェット紐付け
+        Button gainButton = (Button)findViewById(R.id.button_gain);
+        Button sendaiButton = (Button)findViewById(R.id.button_sendai);
+        Button kentButton = (Button)findViewById(R.id.button_kent);
+        //---------------------------------------
+
 
 
         //------------- buttonListener gain
@@ -90,6 +97,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //------------------------------------
+
+
+        //------------------------タブ設定
+        TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);
+        tabLayout.addTab(tabLayout.newTab().setText("HOME"));
+        tabLayout.addTab(tabLayout.newTab().setText("ARTIST"));
+        tabLayout.addTab(tabLayout.newTab().setText("TIME TABLE"));
+        tabLayout.addTab(tabLayout.newTab().setText("FOODS"));
+        tabLayout.addTab(tabLayout.newTab().setText("GOODS"));
 
 
     }
