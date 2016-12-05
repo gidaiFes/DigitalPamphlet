@@ -8,7 +8,16 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    tools:context="com.example.kumazawakento.digitalpamphlet.MainActivity">
+    tools:context="com.example.kumazawakento.digitalpamphlet.MainActivity"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/gidai"
+        android:scaleType="centerCrop"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,15 +28,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="第３６回　技大祭デジタルパンフレット" />
-
-    <ImageView
-        android:src="@drawable/gidai"
-        android:scaleType="fitCenter"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:visibility="gone"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,30 +51,19 @@
             android:layout_height="wrap_content"
             android:id="@+id/button_kent" />
 
+        <Button
+            android:text="test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_test" />
+
+
     </LinearLayout>
-
-
-        <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="136dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <com.viewpagerindicator.TitlePageIndicator
-        android:id="@+id/indicator"
-        android:padding="10dip"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
         <android.support.v4.view.ViewPager
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="202dp"
+            android:layout_height="match_parent"
             android:layout_above="@+id/tab_layout"
             android:layout_weight="1"/>
 
