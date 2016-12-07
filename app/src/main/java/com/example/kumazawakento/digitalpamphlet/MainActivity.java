@@ -2,7 +2,10 @@ package com.example.kumazawakento.digitalpamphlet;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,11 +18,9 @@ import android.widget.Toast;
 
 import com.viewpagerindicator.TitlePageIndicator;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener,
+        MainPageFragment.OnFragmentInteractionListener {
 
-    //private MainFragmentPagerAdapter mAdapter;
-    private ViewPager mPager;
-    private TitlePageIndicator mIndicator;
 
 //---------------------------------------------------------------------onCreate
     //初期設定
@@ -79,7 +80,59 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("FOODS"));
         tabLayout.addTab(tabLayout.newTab().setText("EVENT"));
         //------------------------------------
+
+        // xmlからViewPagerを取得
+        ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
+        // ページタイトル配列
+        final String[] pageTitle = {"HOME", "MAP", "TIME TABLE", "FOODS","EVENT"};
+
+
+        // 表示Pageに必要な項目を設定
+        FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
+            @Override
+            public Fragment getItem(int position) {
+                return MainPageFragment.newInstance(position + 1/*"param_1","param_2"*/);
+            }
+
+            @Override
+            public CharSequence getPageTitle(int position) {
+                return pageTitle[position];
+            }
+
+            @Override
+            public int getCount() {
+                return pageTitle.length;
+            }
+        };
+
+        // ViewPagerにページを設定
+        viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(this);
+
+        // ViewPagerをTabLayoutを設定
+        tabLayout.setupWithViewPager(viewPager);
+
+
     }
 
 
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
 }
