@@ -19,10 +19,12 @@
         android:src="@drawable/gidai"
         android:scaleType="centerCrop"/>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,29 +38,38 @@
 
         <Button
             android:text="gain"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/button_gain" />
+            android:id="@+id/button_gain"
+            android:layout_weight="1"
+            android:padding="30dp"/>
         <Button
-            android:text="sendai"
-            android:layout_width="wrap_content"
+            android:text="send"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/button_sendai" />
+            android:id="@+id/button_sendai"
+            android:layout_weight="1"
+            android:padding="30dp"/>
 
         <Button
             android:text="kent"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/button_kent" />
+            android:id="@+id/button_kent"
+            android:layout_weight="1"
+            android:padding="30dp"/>
 
         <Button
             android:text="test"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/button_test" />
+            android:id="@+id/button_test"
+            android:layout_weight="1"
+            android:padding="30dp"/>
 
 
     </LinearLayout>
+
 
         <android.support.v4.view.ViewPager
             android:id="@+id/view_pager"
