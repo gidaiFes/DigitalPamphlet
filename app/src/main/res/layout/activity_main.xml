@@ -8,8 +8,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    tools:context="com.example.kumazawakento.digitalpamphlet.MainActivity"
-    >
+    tools:context="com.example.kumazawakento.digitalpamphlet.MainActivity">
 
     <ImageView
         android:layout_width="match_parent"
@@ -19,57 +18,21 @@
         android:src="@drawable/gidai"
         android:scaleType="centerCrop"/>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tab_layout"
+        android:layout_weight="1">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="第３６回　技大祭デジタルパンフレット" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:text="gain"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/button_gain"
-            android:layout_weight="1"
-            android:padding="30dp"/>
-        <Button
-            android:text="send"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/button_sendai"
-            android:layout_weight="1"
-            android:padding="30dp"/>
-
-        <Button
-            android:text="kent"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/button_kent"
-            android:layout_weight="1"
-            android:padding="30dp"/>
-
-        <Button
-            android:text="test"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/button_test"
-            android:layout_weight="1"
-            android:padding="30dp"/>
-
-
-    </LinearLayout>
-
 
         <android.support.v4.view.ViewPager
             android:id="@+id/view_pager"
@@ -78,10 +41,49 @@
             android:layout_above="@+id/tab_layout"
             android:layout_weight="1"/>
 
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/LinerLayout"
+            android:layout_gravity="bottom">
+
+        <Button
+            android:text="gain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_gain"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+        <Button
+            android:text="send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_sendai"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+        <Button
+            android:text="kent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_kent"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+        <Button
+            android:text="test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_test"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    </FrameLayout>
+
         <android.support.design.widget.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
-            android:layout_height="59dp"
+            android:layout_height="60dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />

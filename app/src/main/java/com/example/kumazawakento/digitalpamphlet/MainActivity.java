@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_main);
+        setViews();
 
 
         //-----------------------ウィジェット紐付け
@@ -74,11 +77,11 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
         //------------------------タブ設定
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("HOME"));
-        tabLayout.addTab(tabLayout.newTab().setText("MAP"));
-        tabLayout.addTab(tabLayout.newTab().setText("TIME TABLE"));
-        tabLayout.addTab(tabLayout.newTab().setText("FOODS"));
-        tabLayout.addTab(tabLayout.newTab().setText("EVENT"));
+        //tabLayout.addTab(tabLayout.newTab().setText("HOME"));
+        //tabLayout.addTab(tabLayout.newTab().setText("MAP"));
+        //tabLayout.addTab(tabLayout.newTab().setText("TIME TABLE"));
+        //tabLayout.addTab(tabLayout.newTab().setText("FOODS"));
+        //tabLayout.addTab(tabLayout.newTab().setText("EVENT"));
         //------------------------------------
 
         // xmlからViewPagerを取得
@@ -86,12 +89,12 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         // ページタイトル配列
         final String[] pageTitle = {"HOME", "MAP", "TIME TABLE", "FOODS","EVENT"};
 
-
+/*
         // 表示Pageに必要な項目を設定
         FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
-                return MainPageFragment.newInstance(position + 1/*"param_1","param_2"*/);
+                return MainPageFragment.newInstance(position + 1);
             }
 
             @Override
@@ -105,13 +108,14 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
             }
         };
 
+
         // ViewPagerにページを設定
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(this);
 
         // ViewPagerをTabLayoutを設定
         tabLayout.setupWithViewPager(viewPager);
-
+        */
 
     }
 
@@ -135,4 +139,15 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     public void onFragmentInteraction(Uri uri) {
 
     }
+
+
+    private void setViews() {
+        FragmentManager manager = getSupportFragmentManager();
+        ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
+        MainFragmentPagerAdapter adapter = new MainFragmentPagerAdapter(manager);
+        viewPager.setAdapter(adapter);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout.setupWithViewPager(viewPager);
+    }
+
 }
