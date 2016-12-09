@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -42,11 +43,9 @@ public class TabFragmentMap extends Fragment {
      * @return A new instance of fragment TabFragmentMap.
      */
     // TODO: Rename and change types and number of parameters
-    public static TabFragmentMap newInstance(int page/*String param1, String param2*/) {
+    public static TabFragmentMap newInstance(int page) {
         TabFragmentMap fragment = new TabFragmentMap();
         Bundle args = new Bundle();
-        //args.putString(ARG_PARAM1, param1);
-        //args.putString(ARG_PARAM2, param2);
         args.putInt(ARG_PARAM1, page);
         fragment.setArguments(args);
         return fragment;
@@ -65,7 +64,10 @@ public class TabFragmentMap extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab_fragment_map, container, false);
+        View view =  inflater.inflate(R.layout.fragment_tab_fragment_map, container, false);
+        TextView mTextView = (TextView)view.findViewById(R.id.textView);
+        mTextView.setText("setTest");
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

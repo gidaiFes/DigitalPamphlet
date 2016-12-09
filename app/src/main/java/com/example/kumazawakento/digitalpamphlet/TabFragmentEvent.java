@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -42,11 +43,9 @@ public class TabFragmentEvent extends Fragment {
      * @return A new instance of fragment TabFragmentEvent.
      */
     // TODO: Rename and change types and number of parameters
-    public static TabFragmentEvent newInstance(int page/*String param1, String param2*/) {
+    public static TabFragmentEvent newInstance(int page) {
         TabFragmentEvent fragment = new TabFragmentEvent();
         Bundle args = new Bundle();
-        //args.putString(ARG_PARAM1, param1);
-        //args.putString(ARG_PARAM2, param2);
         args.putInt(ARG_PARAM1, page);
         fragment.setArguments(args);
         return fragment;
@@ -56,7 +55,7 @@ public class TabFragmentEvent extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
+            //mParam1 = getArguments().getString(ARG_PARAM1);
             //mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
@@ -65,7 +64,8 @@ public class TabFragmentEvent extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab_fragment_event, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab_fragment_event, container, false);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -100,7 +100,7 @@ public class TabFragmentEvent extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
+        // TODO: Update ar gument type and name
         void onFragmentInteraction(Uri uri);
     }
 }

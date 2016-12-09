@@ -1,12 +1,14 @@
 package com.example.kumazawakento.digitalpamphlet;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -65,7 +67,55 @@ public class MainPageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_page, container, false);
+        View view =  inflater.inflate(R.layout.fragment_main_page, container, false);
+        //-----------------------ウィジェット紐付け
+        Button gainButton = (Button)view.findViewById(R.id.button_gain);
+        Button sendaiButton = (Button)view.findViewById(R.id.button_sendai);
+        Button kentButton = (Button)view.findViewById(R.id.button_kent);
+        Button testButton = (Button)view.findViewById(R.id.button_test);
+        //---------------------------------------
+
+
+        //-----------------------ボタンリスナーの設定
+        gainButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //-------------------------pager.tab.drawer
+                Intent intent = new Intent(getActivity().getApplication(), gainTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        sendaiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //-------------------------pager.tab.drawer
+                Intent intent = new Intent(getActivity().getApplication(), sendaiTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        kentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //-------------------------pager.tab.drawer
+                Intent intent = new Intent(getActivity().getApplication(), kentTestActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        testButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //-------------------------pager.tab.drawer
+                Intent intent = new Intent(getActivity().getApplication(), TabActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
