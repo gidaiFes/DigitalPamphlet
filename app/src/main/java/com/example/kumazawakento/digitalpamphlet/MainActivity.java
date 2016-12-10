@@ -86,36 +86,6 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
         // xmlからViewPagerを取得
         ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
-        // ページタイトル配列
-        final String[] pageTitle = {"HOME", "MAP", "TIME TABLE", "FOODS","EVENT"};
-
-/*
-        // 表示Pageに必要な項目を設定
-        FragmentPagerAdapter adapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
-            @Override
-            public Fragment getItem(int position) {
-                return MainPageFragment.newInstance(position + 1);
-            }
-
-            @Override
-            public CharSequence getPageTitle(int position) {
-                return pageTitle[position];
-            }
-
-            @Override
-            public int getCount() {
-                return pageTitle.length;
-            }
-        };
-
-
-        // ViewPagerにページを設定
-        viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(this);
-
-        // ViewPagerをTabLayoutを設定
-        tabLayout.setupWithViewPager(viewPager);
-        */
 
     }
 

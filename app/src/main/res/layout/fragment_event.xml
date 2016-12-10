@@ -1,0 +1,49 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="com.example.kumazawakento.digitalpamphlet.EventFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="リアル謎解き探索ゲーム"
+        android:textSize="30dp"
+        android:textColor="@color/colorAccent"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/event1"
+        android:id="@+id/imageView1"
+        android:layout_gravity="center"/>
+
+        <TextView
+            android:text="今年度目玉の新企画！
+技大の謎を解き明かせ！？
+今年から始まる新企画！
+謎解きに自信がある人集まれ！
+開催日時・場所
+9/17(土)　10:00~15:00 案内所,他
+9/18(日)　10:00~14:00 案内所,他"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:text="戻る"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button" />
+
+    </LinearLayout>
+</FrameLayout>

@@ -22,7 +22,7 @@
         <activity android:name=".gainTestActivity" />
         <activity android:name=".sendaiTestActivity" />
         <activity android:name=".kentTestActivity" />
-        <activity android:name=".TabActivity"></activity>
+        <activity android:name=".TabActivity" />
     </application>
 
 </manifest>

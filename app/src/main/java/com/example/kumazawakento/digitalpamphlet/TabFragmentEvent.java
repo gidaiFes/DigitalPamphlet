@@ -4,10 +4,18 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 
 /**
@@ -65,6 +73,38 @@ public class TabFragmentEvent extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tab_fragment_event, container, false);
+        ListView listView = (ListView)view.findViewById(R.id.listView1);
+        // 追加するアイテムを生成する
+        final String[] eventTitle = {"リアル謎解き探索ゲーム", "カラオケ大会", "ビンゴ大会", "ヒーローショー","フレンドパーク"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1);
+        for(int i=0;i<eventTitle.length;i++){
+            adapter.add(eventTitle[i]);
+
+        }
+        listView.setAdapter(adapter);
+
+        //リスト項目が選択された時のイベントを追加
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String msg = position + "番目のアイテムがクリックされました";
+                Toast.makeText(getActivity().getApplicationContext(),msg, Toast.LENGTH_SHORT).show();
+                // Fragmentを作成します
+                EventFragment fragment = new EventFragment();
+                // Fragmentの追加や削除といった変更を行う際は、Transactionを利用します
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                // 新しく追加を行うのでaddを使用します
+                // 他にも、メソッドにはreplace removeがあります
+                // メソッドの1つ目の引数は対象のViewGroupのID、2つ目の引数は追加するfragment
+                transaction.add(R.id.container, fragment);
+                //transaction.add(R.id.container, fragment);
+                // 最後にcommitを使用することで変更を反映します
+                transaction.commit();
+
+            }
+        });
+
+
         return view;
     }
 
@@ -89,6 +129,8 @@ public class TabFragmentEvent extends Fragment {
         mListener = null;
     }
 
+
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -103,4 +145,5 @@ public class TabFragmentEvent extends Fragment {
         // TODO: Update ar gument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }
