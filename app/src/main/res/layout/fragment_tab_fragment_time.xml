@@ -6,22 +6,25 @@
     tools:context="com.example.kumazawakento.digitalpamphlet.TabFragmentTime">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="time"
-        android:layout_gravity="bottom"/>
 
     <ToggleButton
         android:text="ToggleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/toggleButton" />
+        android:id="@+id/toggleButton"
+        android:layout_gravity="right"/>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TIME TABLE"
+            android:textSize="30dp"
+            android:layout_gravity="bottom" />
 
         <ImageView
             android:layout_width="wrap_content"
