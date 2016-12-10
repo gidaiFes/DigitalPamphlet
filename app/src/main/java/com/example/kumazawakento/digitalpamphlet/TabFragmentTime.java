@@ -1,12 +1,17 @@
 package com.example.kumazawakento.digitalpamphlet;
 
 import android.content.Context;
+import android.content.Intent;
+import android.media.AudioManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 
@@ -64,7 +69,25 @@ public class TabFragmentTime extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_tab_fragment_time, container, false);
+        final View view = inflater.inflate(R.layout.fragment_tab_fragment_time, container, false);
+        Switch s =(Switch)view.findViewById(R.id.switch1);
+        final ImageView mIV1 = (ImageView)view.findViewById(R.id.imageView1);
+        final ImageView mIV2 = (ImageView)view.findViewById(R.id.imageView2);
+
+
+        s.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // do something, the isChecked will be
+                // true if the switch is in the On position
+                if(isChecked==true){
+                    mIV1.setImageResource(R.drawable.day1_ame);
+                    mIV2.setImageResource(R.drawable.day2_ame);
+                }else{
+                    mIV1.setImageResource(R.drawable.day1_hare);
+                    mIV2.setImageResource(R.drawable.day2_hare);
+                }
+            }
+        });
         return view;
     }
 
@@ -111,4 +134,6 @@ public class TabFragmentTime extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
 }

@@ -7,30 +7,45 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <ToggleButton
-        android:text="ToggleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/toggleButton"
-        android:layout_gravity="right"/>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TIME TABLE"
-            android:textSize="30dp"
-            android:layout_gravity="bottom" />
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:text="TIME TABLE"
+                android:textSize="30dp"
+                android:layout_gravity="left"
+                android:layout_weight="2"/>
+
+            <Switch
+                android:text=""
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/switch1"
+                android:layout_weight="1"
+                android:textOff="晴"
+                android:textOn="雨"
+                android:checked="false" />
+
+        </LinearLayout>
+
+
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/day1_hare"
-            android:id="@+id/imageView"
+            android:id="@+id/imageView1"
             android:layout_weight="1"/>
 
         <ImageView
