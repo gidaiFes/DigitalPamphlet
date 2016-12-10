@@ -1,14 +1,206 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.kumazawakento.digitalpamphlet.TabFragmentFood">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="FOOD MENU"
-        android:layout_gravity="bottom"/>
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/gidai"
+        android:scaleType="centerCrop"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FOOD MENU"
+            android:textSize="30dp"/>
+
+        <!--１行目-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--menu1-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/mogiten1"
+                    android:id="@+id/imageButton1"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:text="「初めまして、キンボールサークルです。僕たちは、揚げアイスを提供します。シューアイスに衣をつけて油で揚げるので、外は衣がサクサクしているのに、中は冷たいアイスとなっています。味はバニラ・チョコ・ストロベリーがあり、全て100円です。新感覚のスイーツなので是非食べに来てください！！」"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView1"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+            <!--menu2-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/mogiten2"
+                    android:id="@+id/imageButton2"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:text="人は誰でもいつも、食べるひと、食べさせるひと。すべての人に情熱的なオムそばを通して、麺の愛、ソースへの無償の愛、もやしやキャベツ、卵への想い、オムレツや焼きそばへの葛藤などを表現する本作は、食べるものに笑いと涙、そして大きな感動を、必ずや与えてくれることでしょう。おいしくなって、いらっしゃい。"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--2行目-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--menu3-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/mogiten3"
+                    android:id="@+id/imageButton3"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:text="「初めまして、キンボールサークルです。僕たちは、揚げアイスを提供します。シューアイスに衣をつけて油で揚げるので、外は衣がサクサクしているのに、中は冷たいアイスとなっています。味はバニラ・チョコ・ストロベリーがあり、全て100円です。新感覚のスイーツなので是非食べに来てください！！」"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+            <!--menu4-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/mogiten4"
+                    android:id="@+id/imageButton4"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:text="人は誰でもいつも、食べるひと、食べさせるひと。すべての人に情熱的なオムそばを通して、麺の愛、ソースへの無償の愛、もやしやキャベツ、卵への想い、オムレツや焼きそばへの葛藤などを表現する本作は、食べるものに笑いと涙、そして大きな感動を、必ずや与えてくれることでしょう。おいしくなって、いらっしゃい。"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--3行目-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--menu5-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/mogiten5"
+                    android:id="@+id/imageButton5"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:text="「初めまして、キンボールサークルです。僕たちは、揚げアイスを提供します。シューアイスに衣をつけて油で揚げるので、外は衣がサクサクしているのに、中は冷たいアイスとなっています。味はバニラ・チョコ・ストロベリーがあり、全て100円です。新感覚のスイーツなので是非食べに来てください！！」"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+            <!--menu7-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/mogiten7"
+                    android:id="@+id/imageButton7"
+                    android:layout_margin="10dp"/>
+
+                <TextView
+                    android:text="人は誰でもいつも、食べるひと、食べさせるひと。すべての人に情熱的なオムそばを通して、麺の愛、ソースへの無償の愛、もやしやキャベツ、卵への想い、オムレツや焼きそばへの葛藤などを表現する本作は、食べるものに笑いと涙、そして大きな感動を、必ずや与えてくれることでしょう。おいしくなって、いらっしゃい。"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView7"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>
