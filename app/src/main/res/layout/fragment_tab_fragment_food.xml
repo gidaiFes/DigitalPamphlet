@@ -50,7 +50,8 @@
                     android:adjustViewBounds="true"
                     app:srcCompat="@drawable/mogiten1"
                     android:id="@+id/imageButton1"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="10dp"
+                    android:background="@null"/>
 
                 <TextView
                     android:text="「初めまして、キンボールサークルです。僕たちは、揚げアイスを提供します。シューアイスに衣をつけて油で揚げるので、外は衣がサクサクしているのに、中は冷たいアイスとなっています。味はバニラ・チョコ・ストロベリーがあり、全て100円です。新感覚のスイーツなので是非食べに来てください！！」"
@@ -74,7 +75,8 @@
                     android:adjustViewBounds="true"
                     app:srcCompat="@drawable/mogiten2"
                     android:id="@+id/imageButton2"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="10dp"
+                    android:background="@null"/>
 
                 <TextView
                     android:text="人は誰でもいつも、食べるひと、食べさせるひと。すべての人に情熱的なオムそばを通して、麺の愛、ソースへの無償の愛、もやしやキャベツ、卵への想い、オムレツや焼きそばへの葛藤などを表現する本作は、食べるものに笑いと涙、そして大きな感動を、必ずや与えてくれることでしょう。おいしくなって、いらっしゃい。"
@@ -106,7 +108,8 @@
                     android:adjustViewBounds="true"
                     app:srcCompat="@drawable/mogiten3"
                     android:id="@+id/imageButton3"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="10dp"
+                    android:background="@null"/>
 
                 <TextView
                     android:text="「初めまして、キンボールサークルです。僕たちは、揚げアイスを提供します。シューアイスに衣をつけて油で揚げるので、外は衣がサクサクしているのに、中は冷たいアイスとなっています。味はバニラ・チョコ・ストロベリーがあり、全て100円です。新感覚のスイーツなので是非食べに来てください！！」"
@@ -130,7 +133,8 @@
                     android:adjustViewBounds="true"
                     app:srcCompat="@drawable/mogiten4"
                     android:id="@+id/imageButton4"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="10dp"
+                    android:background="@null"/>
 
                 <TextView
                     android:text="人は誰でもいつも、食べるひと、食べさせるひと。すべての人に情熱的なオムそばを通して、麺の愛、ソースへの無償の愛、もやしやキャベツ、卵への想い、オムレツや焼きそばへの葛藤などを表現する本作は、食べるものに笑いと涙、そして大きな感動を、必ずや与えてくれることでしょう。おいしくなって、いらっしゃい。"
@@ -163,7 +167,8 @@
                     android:adjustViewBounds="true"
                     app:srcCompat="@drawable/mogiten5"
                     android:id="@+id/imageButton5"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="10dp"
+                    android:background="@null"/>
 
                 <TextView
                     android:text="「初めまして、キンボールサークルです。僕たちは、揚げアイスを提供します。シューアイスに衣をつけて油で揚げるので、外は衣がサクサクしているのに、中は冷たいアイスとなっています。味はバニラ・チョコ・ストロベリーがあり、全て100円です。新感覚のスイーツなので是非食べに来てください！！」"
@@ -187,7 +192,8 @@
                     android:adjustViewBounds="true"
                     app:srcCompat="@drawable/mogiten7"
                     android:id="@+id/imageButton7"
-                    android:layout_margin="10dp"/>
+                    android:layout_margin="10dp"
+                    android:background="@null"/>
 
                 <TextView
                     android:text="人は誰でもいつも、食べるひと、食べさせるひと。すべての人に情熱的なオムそばを通して、麺の愛、ソースへの無償の愛、もやしやキャベツ、卵への想い、オムレツや焼きそばへの葛藤などを表現する本作は、食べるものに笑いと涙、そして大きな感動を、必ずや与えてくれることでしょう。おいしくなって、いらっしゃい。"
