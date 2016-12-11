@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         sendaiButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), sendaiTestActivity.class);
+                Intent intent = new Intent(getApplication(), TwitterTestActivity.class);
                 startActivity(intent);
             }
         });

@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TabTestActivity" />
-        <activity android:name=".sendaiTestActivity" />
+        <activity android:name=".TwitterTestActivity" />
         <activity android:name=".SimpleTestActivity" />
         <activity android:name=".TabActivity" />
     </application>

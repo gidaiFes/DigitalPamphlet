@@ -8,7 +8,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    tools:context="com.example.kumazawakento.digitalpamphlet.sendaiTestActivity">
+    tools:context="com.example.kumazawakento.digitalpamphlet.TwitterTestActivity">
 
     <TextView
         android:text=""

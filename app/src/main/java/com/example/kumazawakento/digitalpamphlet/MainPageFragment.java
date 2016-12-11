@@ -91,7 +91,7 @@ public class MainPageFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //-------------------------pager.tab.drawer
-                Intent intent = new Intent(getActivity().getApplication(), sendaiTestActivity.class);
+                Intent intent = new Intent(getActivity().getApplication(), TwitterTestActivity.class);
                 startActivity(intent);
             }
         });
