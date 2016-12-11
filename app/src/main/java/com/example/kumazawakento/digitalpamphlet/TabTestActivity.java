@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import  android.support.design.widget.TabLayout;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 
 public class TabTestActivity extends AppCompatActivity {
@@ -30,7 +31,17 @@ public class TabTestActivity extends AppCompatActivity {
         toolbar.setTitle("This is title");
         toolbar.setSubtitle("Test Activity");
 
-        //------------------------タブ設定
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
+
+    //------------------------タブ設定
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);
         tabLayout.addTab(tabLayout.newTab().setText("HOME"));
         tabLayout.addTab(tabLayout.newTab().setText("ARTIST"));
