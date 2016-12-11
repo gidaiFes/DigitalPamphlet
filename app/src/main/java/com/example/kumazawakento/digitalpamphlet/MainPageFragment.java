@@ -69,9 +69,9 @@ public class MainPageFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_main_page, container, false);
         //-----------------------ウィジェット紐付け
-        Button gainButton = (Button)view.findViewById(R.id.button_gain);
-        Button sendaiButton = (Button)view.findViewById(R.id.button_sendai);
-        Button kentButton = (Button)view.findViewById(R.id.button_kent);
+        Button gainButton = (Button)view.findViewById(R.id.button_tabact);
+        Button sendaiButton = (Button)view.findViewById(R.id.button_twitter);
+        Button kentButton = (Button)view.findViewById(R.id.button_simpleact);
         Button testButton = (Button)view.findViewById(R.id.button_test);
         //---------------------------------------
 
@@ -81,7 +81,7 @@ public class MainPageFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //-------------------------pager.tab.drawer
-                Intent intent = new Intent(getActivity().getApplication(), gainTestActivity.class);
+                Intent intent = new Intent(getActivity().getApplication(), TabTestActivity.class);
                 startActivity(intent);
             }
         });
@@ -100,7 +100,7 @@ public class MainPageFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 //-------------------------pager.tab.drawer
-                Intent intent = new Intent(getActivity().getApplication(), kentTestActivity.class);
+                Intent intent = new Intent(getActivity().getApplication(), SimpleTestActivity.class);
                 startActivity(intent);
             }
         });

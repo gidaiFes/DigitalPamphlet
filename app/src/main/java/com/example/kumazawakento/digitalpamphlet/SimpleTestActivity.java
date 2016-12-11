@@ -11,7 +11,7 @@ import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class kentTestActivity extends AppCompatActivity {
+public class SimpleTestActivity extends AppCompatActivity {
 
 
     @Override
@@ -27,21 +27,16 @@ public class kentTestActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.mipmap.ic_launcher);
-
         //toolbar.setLogo(R.drawable.gidai);
         toolbar.setTitle("This is title");
-        toolbar.setSubtitle("This is sub-title");
+        toolbar.setSubtitle("Test Activity");
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(kentTestActivity.this, "Navigation click", Toast.LENGTH_SHORT).show();
-                textView.setText("aa");
+                finish();
             }
         });
-
-
-
     }
 
     @Override

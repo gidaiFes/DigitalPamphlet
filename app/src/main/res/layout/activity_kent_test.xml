@@ -8,7 +8,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    tools:context="com.example.kumazawakento.digitalpamphlet.kentTestActivity">
+    tools:context="com.example.kumazawakento.digitalpamphlet.SimpleTestActivity">
 
 
 
@@ -22,16 +22,17 @@
         android:background="?attr/colorPrimary">
 
         <!-- スピナー追加 -->
+        <!--
         <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/spinner" />
-
+            -->
 
     </android.support.v7.widget.Toolbar>
 
     <TextView
-        android:text="TextView"
+        android:text="Hello test activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"

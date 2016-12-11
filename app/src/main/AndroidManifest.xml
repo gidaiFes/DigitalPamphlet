@@ -19,9 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".gainTestActivity" />
+        <activity android:name=".TabTestActivity" />
         <activity android:name=".sendaiTestActivity" />
-        <activity android:name=".kentTestActivity" />
+        <activity android:name=".SimpleTestActivity" />
         <activity android:name=".TabActivity" />
     </application>
 

@@ -4,21 +4,13 @@ package com.example.kumazawakento.digitalpamphlet;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.Toast;
-
-import com.viewpagerindicator.TitlePageIndicator;
 
 public class MainActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener,
         MainPageFragment.OnFragmentInteractionListener {
@@ -46,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         gainButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), gainTestActivity.class);
+                Intent intent = new Intent(getApplication(), TabTestActivity.class);
                 startActivity(intent);
             }
         });
@@ -60,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         kentButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), kentTestActivity.class);
+                Intent intent = new Intent(getApplication(), SimpleTestActivity.class);
                 startActivity(intent);
             }
         });

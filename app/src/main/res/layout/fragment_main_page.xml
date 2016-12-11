@@ -8,41 +8,61 @@
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/LinerLayout"
-        android:layout_gravity="bottom"
-        android:gravity="bottom">
+        android:layout_gravity="bottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:gravity="bottom">
 
-        <Button
-            android:text="gain"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:id="@+id/button_gain"
-            android:layout_weight="1"
-            android:background="#10100000"/>
-        <Button
-            android:text="twitter"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:id="@+id/button_sendai"
-            android:layout_weight="1"
-            android:background="#10100000"/>
-        <Button
-            android:text="kent"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:id="@+id/button_kent"
-            android:layout_weight="1"
-            android:background="#10100000"/>
-        <Button
-            android:text="test"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:id="@+id/button_test"
-            android:layout_weight="1"
-            android:background="#10100000"/>
+            <Button
+                android:text="Simple"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:id="@+id/button_simpleact"
+                android:layout_weight="1"
+                android:background="#10100000"/>
+
+            <Button
+                android:text="Tab"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:id="@+id/button_tabact"
+                android:layout_weight="1"
+                android:background="#10100000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:gravity="bottom">
+
+            <Button
+                android:text="test"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:id="@+id/button_test"
+                android:layout_weight="1"
+                android:background="#10100000"/>
+
+            <Button
+                android:text="twitter"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:id="@+id/button_twitter"
+                android:layout_weight="1"
+                android:background="#10100000"/>
+
+        </LinearLayout>
+
+
     </LinearLayout>
 
     <TextView
