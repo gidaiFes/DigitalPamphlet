@@ -11,9 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.kumazawakento.digitalpamphlet.EventInfo;
 
 import java.util.ArrayList;
 
@@ -89,10 +91,14 @@ public class TabFragmentEvent extends Fragment {
         //リスト項目が選択された時のイベントを追加
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String msg = position + "番目のアイテムがクリックされました";
-                Toast.makeText(getActivity().getApplicationContext(),msg, Toast.LENGTH_SHORT).show();
+                //String msg = position + "番目のアイテムがクリックされました";
+                //Toast.makeText(getActivity().getApplicationContext(),msg, Toast.LENGTH_SHORT).show();
+
                 // Fragmentを作成します
+                Bundle bundle = new Bundle();
+                bundle.putInt("position", position);
                 EventFragment fragment = new EventFragment();
+                fragment.setArguments(bundle);
                 // Fragmentの追加や削除といった変更を行う際は、Transactionを利用します
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
                 // 新しく追加を行うのでaddを使用します
@@ -146,6 +152,17 @@ public class TabFragmentEvent extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update ar gument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public void makeEventView(int i, View v){
+        TextView name = (TextView)v.findViewById(R.id.textView1);
+        TextView text = (TextView)v.findViewById(R.id.textView2);
+        ImageView image = (ImageView)v.findViewById(R.id.imageView1);
+
+        name.setText(EventInfo.getEventName(i));
+        text.setText(EventInfo.getEventText(i));
+        image.setImageDrawable(EventInfo.getImageRes(i,v));
+
     }
 
 }

@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 /**
@@ -32,10 +34,11 @@ public class EventFragment extends Fragment {
     }
 
     // TODO: Rename and change types and number of parameters
-    public static EventFragment newInstance() {
+    public static EventFragment newInstance(int position) {
         EventFragment fragment = new EventFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
+        args.putInt("position", position);
         return fragment;
     }
 
@@ -51,6 +54,12 @@ public class EventFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_event, container, false);
         Button backButton = (Button)view.findViewById(R.id.button);
         final Fragment fragment = this;
+
+        Bundle bundle = getArguments();
+        int position = bundle.getInt("position");
+        makeEventView(position,view);
+
+
         //-----------------------ボタンリスナーの設定
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,5 +113,16 @@ public class EventFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    public void makeEventView(int i, View v){
+        TextView name = (TextView)v.findViewById(R.id.textView1);
+        TextView text = (TextView)v.findViewById(R.id.textView2);
+        ImageView image = (ImageView)v.findViewById(R.id.imageView1);
+
+        name.setText(EventInfo.getEventName(i));
+        text.setText(EventInfo.getEventText(i));
+        image.setImageDrawable(EventInfo.getImageRes(i,v));
+
     }
 }
