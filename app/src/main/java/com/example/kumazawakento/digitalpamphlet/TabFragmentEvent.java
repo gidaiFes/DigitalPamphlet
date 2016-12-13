@@ -77,9 +77,9 @@ public class TabFragmentEvent extends Fragment {
         View view = inflater.inflate(R.layout.fragment_tab_fragment_event, container, false);
         ListView listView = (ListView)view.findViewById(R.id.listView1);
         // 追加するアイテムを生成する
-        final String[] eventTitle = {"リアル謎解き探索ゲーム", "カラオケ大会", "ビンゴ大会",
+        final String[] eventTitle = {"リアル謎解き探索ゲーム", "カラオケ大会"/*, "ビンゴ大会",
                 "ヒーローショー","フレンドパーク","ゆるキャラ", "能の演舞・体験", "押し花", "ダンスパフォーマンス",
-                "地域・他大学模擬店", "フリーマーケット"};
+                "地域・他大学模擬店", "フリーマーケット"*/};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1);
         for(int i=0;i<eventTitle.length;i++){

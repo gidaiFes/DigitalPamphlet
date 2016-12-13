@@ -35,6 +35,16 @@
                 android:layout_weight="1"
                 android:background="#10100000"/>
 
+
+            <Button
+                android:text="test"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:id="@+id/button_test"
+                android:layout_weight="1"
+                android:background="#10100000"/>
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -45,18 +55,18 @@
             android:gravity="bottom">
 
             <Button
-                android:text="test"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:id="@+id/button_test"
-                android:layout_weight="1"
-                android:background="#10100000"/>
-
-            <Button
                 android:text="twitter"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:id="@+id/button_twitter"
+                android:layout_weight="1"
+                android:background="#10100000"/>
+
+            <Button
+                android:text="official site"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:id="@+id/button_official"
                 android:layout_weight="1"
                 android:background="#10100000"/>
 

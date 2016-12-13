@@ -1,5 +1,6 @@
 package com.example.kumazawakento.digitalpamphlet;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -28,10 +29,14 @@ public class TwitterTestActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        Intent intent = getIntent();
+        String url =intent.getStringExtra("url");
         WebView twitterView = (WebView)findViewById(R.id.twitter_web);
         //WebViewClient使用でアプリ内でtwitterを開くことができるのです（どやぁ）
         twitterView.setWebViewClient(new WebViewClient());
-        twitterView.loadUrl("https://twitter.com/nut_fes");
+        //twitterView.loadUrl("https://twitter.com/nut_fes");
+        twitterView.loadUrl(url);
         //WebView内でのJavascript利用を有効にする
         twitterView.getSettings().setJavaScriptEnabled(true);
     }

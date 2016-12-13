@@ -25,6 +25,7 @@ public class MainPageFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private String mParam;
 
+    private String[] url = {"https://twitter.com/nut_fes","http://www.nutfes.net/"};
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -73,6 +74,7 @@ public class MainPageFragment extends Fragment {
         Button sendaiButton = (Button)view.findViewById(R.id.button_twitter);
         Button kentButton = (Button)view.findViewById(R.id.button_simpleact);
         Button testButton = (Button)view.findViewById(R.id.button_test);
+        Button officialButton = (Button)view.findViewById(R.id.button_official);
         //---------------------------------------
 
 
@@ -92,9 +94,21 @@ public class MainPageFragment extends Fragment {
             public void onClick(View v) {
                 //-------------------------pager.tab.drawer
                 Intent intent = new Intent(getActivity().getApplication(), TwitterTestActivity.class);
+                intent.putExtra("url",url[0]);
                 startActivity(intent);
             }
         });
+
+        officialButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //-------------------------pager.tab.drawer
+                Intent intent = new Intent(getActivity().getApplication(), TwitterTestActivity.class);
+                intent.putExtra("url",url[1]);
+                startActivity(intent);
+            }
+        });
+
 
         kentButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,6 +127,7 @@ public class MainPageFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
 
 
         return view;

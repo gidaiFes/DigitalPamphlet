@@ -12,19 +12,30 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="リアル謎解き探索ゲーム"
-        android:textSize="30dp"
-        android:textColor="@color/colorAccent"/>
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/event1"
-        android:id="@+id/imageView1"
-        android:layout_gravity="center"/>
+
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="リアル謎解き探索ゲーム"
+            android:textSize="30dp"
+            android:textColor="@color/colorAccent"
+            android:id="@+id/textView1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/event1"
+            android:id="@+id/imageView1"
+            android:layout_gravity="center"/>
 
         <TextView
             android:text="今年度目玉の新企画！
@@ -39,11 +50,15 @@
             android:id="@+id/textView2"
             android:textColor="@color/colorAccent" />
 
+
+        </LinearLayout>
+
+    </ScrollView>
+
         <Button
             android:text="戻る"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="20dp"
             android:id="@+id/button" />
-
     </LinearLayout>
 </FrameLayout>
