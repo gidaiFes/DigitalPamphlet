@@ -12,7 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ScrollView
+        <Button
+            android:text="戻る"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button" />
+
+
+        <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -21,6 +28,8 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+
 
             <TextView
             android:layout_width="match_parent"
@@ -51,14 +60,10 @@
             android:textColor="@color/colorAccent" />
 
 
+
         </LinearLayout>
 
     </ScrollView>
 
-        <Button
-            android:text="戻る"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:id="@+id/button" />
     </LinearLayout>
 </FrameLayout>

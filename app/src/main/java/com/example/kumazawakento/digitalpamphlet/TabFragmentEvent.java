@@ -81,7 +81,7 @@ public class TabFragmentEvent extends Fragment {
                 "ヒーローショー","フレンドパーク","ゆるキャラ", "能の演舞・体験", "押し花", "ダンスパフォーマンス",
                 "地域・他大学模擬店", "フリーマーケット"*/};
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), R.layout.custom_text_list_item);
         for(int i=0;i<eventTitle.length;i++){
             adapter.add(eventTitle[i]);
 
